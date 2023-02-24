@@ -1,58 +1,39 @@
 import retro from './assets/images/image-retro-pcs.jpg';
 import laptop from './assets/images/image-top-laptops.jpg';
 import game from './assets/images/image-gaming-growth.jpg';
+import CountChild from './countChild';
 
 function Count() {
     return(
         <div className="count">
 
-    <div className="one count-child">
-      <img className="count-img" src={retro} aria-hidden="true" alt="retro"/>
-      <div>
-
-        <h2>01</h2>
-
-        <div>
-
-          <h3>Reviving Retro PCs</h3>
-          <p>What happens when old PCs are given modern upgrades?</p>
-
-        </div>
-        
-      </div>
-    </div>
-
-    <div className="two count-child">
-      <img alt="laptop" className="count-img" src={laptop} aria-hidden="true"/>
-      <div>
-
-        <h2>02</h2>
-        
-        <div>
-          
-          <h3>Top 10 Laptops of 2022</h3>
-          <p>Our best picks for various needs and budgets.</p>
-
-        </div>
-      </div>
-    </div>
-
-    <div className="three count-child">
-      <img alt="game" className="count-img" src={game} aria-hidden="true"/>
-      <div>
-
-        <h2>03</h2>
-
-        <div>
-
-          <h3>The Growth of Gaming</h3>
-          <p>How the pandemic has sparked fresh opportunities.</p>
-
-        </div>
-        
-
-      </div>
-    </div>
+      <CountChild counting={{
+        divClass: "one count-child",
+        source: retro,
+        name: "retro",
+        head2:  "01",
+        head3:  "Reviving Retro PCs",
+        para: "What happens when old PCs are given modern upgrades?"
+        }}/>
+  
+      <CountChild counting={{
+        divClass: "two count-child",
+        source: laptop,
+        name: "laptop",
+        head2:  "02",
+        head3:  "Top 10 Laptops of 2022",
+        para: "Our best picks for various needs and budgets."
+        }}/>
+    
+      <CountChild counting={{
+        divClass: "three count-child",
+        source: game,
+        name: "game",
+        head2:  "03",
+        head3:  "The Growth of Gaming",
+        para: "How the pandemic has sparked fresh opportunities."
+        }}/>
+    
 
   </div>
 
