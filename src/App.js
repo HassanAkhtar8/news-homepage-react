@@ -1,6 +1,6 @@
 //import logo from './logo.svg';
 //import './App.css';
-import Nav from './components/Nav';
+import NavCont from './components/NavCont';
 import Frame from './components/Frame';
 import './components/scss/input.css';
 import NewDark from './components/NewDark';
@@ -9,7 +9,7 @@ import Count from './components/Count';
 function App() {
   return (
   <>
-    <Nav />
+    <NavCont />
     <Frame />
     <NewDark />
     <Count />
