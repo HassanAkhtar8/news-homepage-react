@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 function Nav(props){
     return(
         <nav className={`nav-icon ${props.vari? "hidden" : ""}`}>
