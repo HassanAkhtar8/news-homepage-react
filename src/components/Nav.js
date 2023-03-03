@@ -1,7 +1,6 @@
 import React from "react";
 function Nav(props){
     return(
-        //added commit
         <nav id="desktop" className={`slide ${props.active? "slider" : "" }`} >
             <ul>
             <li>Home</li>

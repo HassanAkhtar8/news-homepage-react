@@ -1,7 +1,7 @@
 import frames from './assets/images/image-web-3-mobile.jpg';
 function Frame (){
     return(
-        <div class="web">
+        <div className="web">
 
     <img className='main-frame' src={frames} aria-hidden="true" alt='mainFrame'/>
     <div className='flex'>

@@ -4,33 +4,57 @@
 body{
     box-sizing: border-box;
     min-height: 100vh;
-    //background-position: center;
-    //background-size: cover;
-    display: flex;
-    align-content: center;
-    justify-content: center;
     margin: 1rem;
+    background-color: u.$soft-white;
+}
+#root{
+    display: grid;
+    height: 100%;
+    grid-template-areas: 
+    "head head head head"
+    "main main main main"
+    "main main main main"
+    "side side side side"
+    "foot foot foot foot";
+}
+.menu-bar{
+    grid-area: head;
+}
+.web{
+    grid-area: main;
+}
+.new-dark{
+    grid-area: side;
+}
+.count{
+    grid-area: foot;
 }
 ul{
     list-style: none;
+    li:hover{
+        color: u.$soft-red;
+        cursor: pointer;
+    }
 }
 .logo{
     width: auto;
 }
-.hidden{
+//.hidden{
     //visibility: hidden;
-    display: none;
-}
+   // display: none;
+//}
 .logo-container{
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
 }
+
 .main-frame{
     width: 100%;
     height: 20em;
 }
 h1{
+    color: u.$very-dark-blue;
     font-size: 3rem;
     font-size: 900;
     margin-bottom: 1rem;
@@ -38,69 +62,81 @@ h1{
 p{
     font-size: 1.1rem;
     line-height: 1.3;
+    color: u.$dark-gray-blue;
 }
 .btn{
     width: 50%;
     height: 2.5rem;
     border: none;
-    background-color: orange;
+    background-color: u.$soft-red;
     letter-spacing: 0.1rem;
-    font-size: 1rem;
-    color: white;
+    font-size: 1.2rem;
+    color: u.$soft-white;
     margin: 2rem 0;
     cursor: pointer;
 }
-h2{
-    margin-bottom: 1.5rem;
+.btn:hover{
+    background-color: u.$very-dark-blue;
 }
 .new-dark{
-    color: white;
+    background-color: u.$very-dark-blue;
+    color: u.$soft-white;
     p{
-        color: gray;
+        color: u.$grayish-blue;
     }
     padding: 1rem;
-    background-color: rgb(33, 33, 81);
     .new-child{
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         p{
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
         .line{
             width: 100%;
             height: 1px;
-            background-color: gray;
+            background-color: u.$dark-gray-blue;
         }
+    }
+    h2{
+        color: u.$soft-orange;
+        margin-bottom: 1.5rem;
+    }
+    h3:hover{
+        color: u.$soft-orange;
     }
 }
 h3{
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 .count{
-    height: 2rem;
+    //height: 2rem;
     margin-top: 4rem;
+    //margin-bottom: 10rem;
     h2{
-        color: gray;
+        color: u.$grayish-blue;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
     }
     h3{
-        color: darkblue;
+        color: u.$very-dark-blue;
+    }
+    h3:hover{
+        color: u.$soft-red;
     }
     p{
-        color: gray;
+        color: u.$dark-gray-blue;
+        line-height: 1.8rem;
     }
     .count-child{
         display: flex;
-        justify-content: space-between;
+        gap: 1rem; 
         margin-bottom: 2rem;
-        .count-img{
-            width: 40%;
-            margin-right: 1rem;
-        }
     }
 }
 .nav-icon{
     z-index: 999;
     cursor: pointer;
 }
+
 //navbar styles
 
 
@@ -115,7 +151,7 @@ ul{
 }
 .slide{
     position: absolute;
-    background-color: white;
+    background-color: u.$soft-white;
     top: 0;
     right: 0;
     width: 80%;
@@ -126,48 +162,57 @@ ul{
 .slider{
     right: 0;
 }
-
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 45em) {
     #root{
-        display: grid;
-        height: 100%;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 2.5em 1fr 1fr;
-        grid-auto-rows: minmax(15em, 20em);
+        grid-template-areas: 
+        "head head head head"
+        "main main main main"
+        "foot foot side side"
+        "foot foot side side";
+    }
+    .web{
+        //grid-column: 1/3;
+       .flex{
+        margin-top: 1rem;
+           display: flex;
+           .btn-container{
+               width: 100%;
+           }
+       }
+   }
+}
+@media screen and (min-width: 70em) {
+    #root{
+        grid-template-areas: 
+        "head head head head "
+        "main main main side"
+        "main main main side"
+        "foot foot foot foot";
         gap: 1.5rem;
-   // grid-template-areas: 
-   //     "a a a"
-   //     "b b c"
-   //     "d e c"
-   //     "f g h";
     }
 .menu-bar{
-    grid-column: 1/-1;
+    //grid-column: 1/-1;
     display: flex;
     align-items: center;
 }
 .web{
-     grid-column: 1/3;
-    // grid-row: 2/4;
-    .flex{
-        display: flex;
-        .btn-container{
-            width: 100%;
-        }
-    }
+   .flex{
+       .btn-container{
+           .btn{
+            width: 50%;
+           }
+       }
+   }
 }
 
-   //.nav-container{
-   // display: flex;
-   //}
   .new-dark{
     .main-frame{
         width: 100%;
     }
-    grid-column: 3/-1;
+   // grid-column: 3/-1;
   }
   .count{
-    grid-column: 1/-1;
+    //grid-column: 1/-1;
     display: flex;
   }
    .logo-container{
@@ -177,27 +222,22 @@ ul{
     height: auto;
     margin-right: 2rem;
     margin-right: auto;
-    outline: 2px solid yellow;
+    //outline: 2px solid yellow;
    }
-
-    //nav{
-    // outline: 2px solid red;
-    //height: 2rem;
-    //}
-   
-    
+    .btn{
+        width: 100%;
+    }
    
    ul{
     //border: 2px solid green;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    //align-items: center;
     
     margin-top: 1.5rem;
     li{
         padding: 0;
-        margin-right: 1.5rem;
+        margin-right: 10%;
     }
    }
    .slide{
@@ -206,41 +246,8 @@ ul{
     right: 0;
     height: auto;
    }
-   #desktop{
-    display: inline-block;
-    
-    //width: max-content;
-    //height: auto;
-    //right: 0;
-   }
     .nav-icon{
         display: none;
     }
-    //.menu-bar{
-        //grid-area: a;
-     //  }
-    /* 
     
-   .main-frame{
-    grid-area: b;
-   }
-   .new-dark{
-    grid-area: c;
-   }
-   h1{
-    grid-area: d;
-   }
-   .btn-container{
-    grid-area: e;
-   }
-   .one{
-    grid-area: f;
-   }
-   .two{
-    grid-area: g;
-   }
-   .three{
-    grid-area: h;
-   }
-   */
 }
