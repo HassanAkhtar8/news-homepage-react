@@ -1,7 +1,8 @@
 import React from "react";
 function Nav(props){
     return(
-        <nav className={`nav-icon ${props.vari? "hidden" : ""}`}>
+        
+        <nav id="desktop" className={`slide ${props.active? "slider" : "" }`} >
             <ul>
             <li>Home</li>
             <li>New</li>
@@ -9,6 +10,7 @@ function Nav(props){
             <li>Trending</li>
             <li>Categories</li>
             </ul>
+
         </nav>
     );
 }
