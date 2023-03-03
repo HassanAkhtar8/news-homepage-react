@@ -1,6 +1,6 @@
 function NewDark (){
     return(
-        <div className='new-dark'>
+        <aside className='new-dark'>
 
     <h2>New </h2>
 
@@ -27,7 +27,7 @@ function NewDark (){
 
   </div>
 
-</div>
+</aside>
 
 
     );
