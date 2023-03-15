@@ -36,7 +36,7 @@ body {
   min-height: 100vh;
   margin: 1rem;
   background-color: hsl(36, 100%, 99%);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #root {
