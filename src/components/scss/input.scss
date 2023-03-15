@@ -6,8 +6,10 @@ body{
     min-height: 100vh;
     margin: 1rem;
     background-color: u.$soft-white;
+    overflow: hidden;
 }
 #root{
+    overflow: hidden;
     display: grid;
     height: 100%;
     grid-template-areas: 
