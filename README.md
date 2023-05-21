@@ -56,5 +56,5 @@ Use state and other complex topics in my projects.
 
 ## Author
 
+- Hassan Akhtar
 - Website - [Github Profile](https://www.your-site.com)
-- Frontend Mentor - [@HassanAkhtar8](https://www.frontendmentor.io/profile/HassanAkhtar8)
